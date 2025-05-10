@@ -1,9 +1,9 @@
 /* Base styles */
 :root {
-  --bg: #f5f7fa;
+  --bg: #eceff1;
   --fg: #181825;
   --accent: #7c3aed;
-  --box-bg: #f0f2f6;
+  --box-bg: #e3e6ea;
   --box-shadow: 0 4px 12px rgba(60,60,60,0.07);
   --toggle-bg: #e2e8f0;
   --toggle-fg: #181825;
@@ -37,12 +37,27 @@ header {
   padding: 2rem 2rem 1rem 2rem;
   background: transparent;
 }
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .header-title-group {
+    align-items: flex-start !important;
+    width: 100%;
+  }
+}
+
 .header-title-group {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 0.3em;
+  width: auto;
 }
+
 .site-title-gradient {
   font-size: 2.5rem;
   letter-spacing: 0.04em;
