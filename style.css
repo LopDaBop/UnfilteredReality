@@ -1,14 +1,15 @@
 /* Base styles */
 :root {
-  --bg: #f8f9fa;
+  --bg: #f5f7fa;
   --fg: #181825;
   --accent: #7c3aed;
-  --box-bg: #fff;
+  --box-bg: #f0f2f6;
   --box-shadow: 0 4px 12px rgba(60,60,60,0.07);
   --toggle-bg: #e2e8f0;
   --toggle-fg: #181825;
   --star-color: #ffd700;
   --transition: 0.4s cubic-bezier(.77,0,.18,1);
+  --podcast-green: #1db954;
 }
 [data-theme="dark"] {
   --bg: #181825;
@@ -31,10 +32,16 @@ html, body {
 }
 header {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 2rem 2rem 1rem 2rem;
   background: transparent;
+}
+.header-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
 }
 header h1 {
   font-size: 2.5rem;
@@ -44,7 +51,19 @@ header h1 {
   background: linear-gradient(90deg, var(--accent), #4f46e5 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+.podcast-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--podcast-green);
+  margin-left: 2px;
+  letter-spacing: 0.04em;
+  margin-top: -0.3em;
+  margin-bottom: 0.2em;
+  opacity: 0.95;
+}
+
 #theme-toggle {
   border: none;
   background: var(--toggle-bg);
@@ -120,8 +139,7 @@ header h1 {
   margin: 0 auto;
 }
 .article-box {
-  background: #e6e6ee;
-  /* darker in light mode for contrast */
+  background: var(--box-bg);
   color: var(--fg);
   border-radius: 1.2rem;
   box-shadow: var(--box-shadow);
@@ -179,6 +197,9 @@ footer {
   display: inline-block;
   transition: color var(--transition);
 }
+.back-link .arrow {
+  display: none; /* Hide any HTML arrow so only CSS arrow shows */
+}
 .back-link:hover, .back-link:focus {
   background: var(--accent);
   color: #fff;
@@ -196,7 +217,7 @@ footer {
 
 /* Article content page/card styling */
 .article-content-page {
-  background: #fff;
+  background: var(--box-bg);
   color: var(--fg);
   max-width: 700px;
   margin: 2.5rem auto 2.5rem auto;
