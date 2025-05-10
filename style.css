@@ -43,7 +43,7 @@ header {
   align-items: flex-start;
   gap: 0.3em;
 }
-header h1 {
+.site-title-gradient {
   font-size: 2.5rem;
   letter-spacing: 0.04em;
   font-weight: bold;
@@ -53,6 +53,41 @@ header h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.header-title-group h1:not(.site-title-gradient) {
+  font-size: 2.1rem;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  margin: 0;
+  color: #232336;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+}
+[data-theme="dark"] .header-title-group h1:not(.site-title-gradient) {
+  color: #f8f9fa;
+}
+
+.episode-label {
+  font-size: 1.03rem;
+  font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+  color: #1DB954;
+  background: rgba(29,185,84,0.11);
+  border-radius: 0.5em;
+  padding: 0.09em 0.7em 0.09em 0.7em;
+  margin-top: 0.32em;
+  margin-bottom: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  box-shadow: 0 1px 4px rgba(29,185,84,0.08);
+}
+[data-theme="dark"] .episode-label {
+  color: #1DB954;
+  background: rgba(29,185,84,0.22);
+}
+
 .podcast-label {
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   font-size: 1.12rem;
