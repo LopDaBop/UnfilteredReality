@@ -120,7 +120,8 @@ header h1 {
   margin: 0 auto;
 }
 .article-box {
-  background: var(--box-bg);
+  background: #e6e6ee;
+  /* darker in light mode for contrast */
   color: var(--fg);
   border-radius: 1.2rem;
   box-shadow: var(--box-shadow);
@@ -129,11 +130,15 @@ header h1 {
   font-weight: 500;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.18s cubic-bezier(.77,0,.18,1), box-shadow 0.18s cubic-bezier(.77,0,.18,1);
+  transition: transform 0.18s cubic-bezier(.77,0,.18,1), box-shadow 0.18s cubic-bezier(.77,0,.18,1), background var(--transition);
   cursor: pointer;
   outline: none;
   border: 2px solid transparent;
 }
+[data-theme="dark"] .article-box {
+  background: var(--box-bg);
+}
+
 .article-box:hover, .article-box:focus {
   transform: scale(1.05) rotate(-2deg);
   box-shadow: 0 8px 32px rgba(60,60,60,0.13);
@@ -146,6 +151,87 @@ footer {
   font-size: 1rem;
   background: transparent;
 }
+
+/* Back link styled as button */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: #e6e6ee;
+  color: var(--fg);
+  border: none;
+  border-radius: 999px;
+  padding: 0.5em 1.2em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform 0.15s;
+  margin: 1.5rem 0 1.2rem 0;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.back-link::before {
+  content: '\2190';
+  font-size: 1.2em;
+  margin-right: 0.4em;
+  display: inline-block;
+  transition: color var(--transition);
+}
+.back-link:hover, .back-link:focus {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 24px rgba(60,60,60,0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+[data-theme="dark"] .back-link {
+  background: #232336;
+  color: var(--fg);
+}
+[data-theme="dark"] .back-link:hover, [data-theme="dark"] .back-link:focus {
+  background: var(--accent);
+  color: #181825;
+}
+
+/* Article content page/card styling */
+.article-content-page {
+  background: #fff;
+  color: var(--fg);
+  max-width: 700px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 32px rgba(60,60,60,0.13);
+  position: relative;
+  transition: background var(--transition), color var(--transition);
+}
+[data-theme="dark"] .article-content-page {
+  background: #232336;
+  color: var(--fg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.32);
+}
+
+.article-content-page h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.article-content-page p {
+  font-size: 1.18rem;
+  line-height: 1.7;
+  margin-bottom: 1.3rem;
+}
+
+@media (max-width: 700px) {
+  .article-content-page {
+    padding: 1.1rem 0.5rem;
+    margin: 1.2rem 0.3rem 1.2rem 0.3rem;
+  }
+}
+
 /* Responsive tweaks */
 @media (max-width: 700px) {
   header {
