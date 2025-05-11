@@ -592,21 +592,10 @@ footer {
 .article-header-flex {
   position: relative;
   min-height: 64px;
+  padding-top: 1.5em;
 }
 
-.article-back-link {
-  position: absolute;
-  top: 1.2em;
-  left: clamp(0.7em, 4vw, 2em);
-  z-index: 10;
-}
-  position: absolute;
-  top: 0.9em;
-  right: clamp(0.7em, 4vw, 2em);
-  display: flex;
-  align-items: center;
-  z-index: 10;
-}
+
 
 @media (max-width: 700px) {
   header {
