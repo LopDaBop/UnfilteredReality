@@ -60,6 +60,7 @@ header {
   gap: 1.2em;
   flex-wrap: wrap;
   min-width: 0;
+  position: relative;
 }
 .header-title-group {
   display: flex;
