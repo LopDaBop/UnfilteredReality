@@ -572,6 +572,35 @@ footer {
 
 .article-header-actions {
   position: absolute;
+  top: 1.2em;
+  right: clamp(0.7em, 4vw, 2em);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.article-header-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: max-content;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.article-header-flex {
+  position: relative;
+  min-height: 64px;
+}
+
+.article-back-link {
+  position: absolute;
+  top: 1.2em;
+  left: clamp(0.7em, 4vw, 2em);
+  z-index: 10;
+}
+  position: absolute;
   top: 0.9em;
   right: clamp(0.7em, 4vw, 2em);
   display: flex;
