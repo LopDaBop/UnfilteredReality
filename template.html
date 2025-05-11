@@ -13,17 +13,21 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <a href="index.html" class="back-link">Home</a>
-    <div class="header-title-group">
+  <div class="article-header-flex">
+    <div class="article-header-row">
+      <a href="index.html" class="back-link">Home</a>
+      <div class="article-header-actions">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <span class="toggle-icon"></span>
+        </button>
+      </div>
+    </div>
+    <div class="article-header-center">
       <h1>ARTICLE TITLE</h1>
       <!-- Update the episode number below -->
       <span class="episode-label">Episode: X</span>
     </div>
-    <button id="theme-toggle" aria-label="Toggle dark/light mode">
-      <span class="toggle-icon"></span>
-    </button>
-  </header>
+  </div>
   <main>
     <!-- Use the .article-content-page class for a centered, card-like look -->
     <div class="article-content-page">
