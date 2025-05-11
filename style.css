@@ -76,11 +76,12 @@ header {
   letter-spacing: 0.04em;
   font-weight: bold;
   margin: 0;
-  background: linear-gradient(90deg, #ffe066 10%, #0050b3 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  background: linear-gradient(90deg, #ffe066 10%, rgba(0,150,167,0.85) 90%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: inline-block;
   word-break: break-word;
   max-width: 100%;
   margin-bottom: 0.12em;
