@@ -616,15 +616,20 @@ footer {
     font-size: 1.1rem;
   }
   .article-header-flex {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
     min-height: unset;
   }
   .article-header-center {
+    order: 2;
+    width: 100%;
+    margin-top: 0.7em;
     position: static;
     transform: none;
-    margin: 0.7em auto 0 auto;
     text-align: center;
     pointer-events: auto;
+  }
+  .back-link, .article-header-actions {
+    order: 1;
   }
 }
