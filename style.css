@@ -70,6 +70,51 @@ header {
   align-items: flex-start;
   gap: 0.3em;
   width: auto;
+  position: relative;
+}
+
+.social-group {
+  display: flex;
+  gap: 0.6em;
+  background: rgba(255,255,255,0.7);
+  border-radius: 2em;
+  box-shadow: 0 2px 10px rgba(124,58,237,0.09);
+  padding: 0.25em 0.8em 0.25em 0.8em;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  border: 1.5px solid #e2d3fa;
+  align-items: center;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  box-shadow: 0 0 0 2px rgba(124,58,237,0.08);
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+.social-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.13);
+}
+
+@media (max-width: 700px) {
+  .header-title-group {
+    align-items: flex-start !important;
+  }
+  .social-group {
+    margin-top: 0.7em;
+    margin-bottom: 0.2em;
+    align-self: flex-start;
+  }
 }
 
 .site-title-gradient {
