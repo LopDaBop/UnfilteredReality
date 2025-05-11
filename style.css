@@ -13,7 +13,7 @@
 }
 
 body {
-  background: linear-gradient(120deg, rgba(124,58,237,0.22) 0%, rgba(124,58,237,0.12) 100%), var(--bg);
+  background: linear-gradient(120deg, rgba(124,58,237,0.32) 0%, rgba(124,58,237,0.22) 100%), var(--bg);
   /* SVG grain overlay for light mode */
   background-image:
     linear-gradient(120deg, rgba(124,58,237,0.14) 0%, rgba(124,58,237,0.09) 100%),
