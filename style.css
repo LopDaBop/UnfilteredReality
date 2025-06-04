@@ -449,6 +449,18 @@ header {
     padding: 1rem;
   }
 }
+/* Special style for the introduction article box */
+.article-grid a[href="article1.html"] {
+  background: #f0f9f0;
+  border: 2px solid #4CAF50;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1), 0 4px 32px 0 rgba(76, 175, 80, 0.15);
+}
+
+[data-theme="dark"] .article-grid a[href="article1.html"] {
+  background: #1a2a1a;
+  border-color: #4CAF50;
+}
+
 .article-box {
   background: #fff;
   color: var(--fg);
